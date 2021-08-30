@@ -2,13 +2,13 @@ import React from 'react'
 import { StyleSheet, Text, View, TextInput, Image } from 'react-native'
 import { w, h } from "react-native-responsiveness";
 
-export const WelcomeTextinput = () => {
+export const WelcomeTextinput = (props) => {
     return (
         <View style={styles.container} >
             <View style={styles.iconcontainer} >
-                <Image source = {require("../assets/email.png")} style={styles.imgstyle} />
+                <Image source = {props.src} style={styles.imgstyle} />
             </View>
-            <TextInput placeholder = "Email address" style={styles.inputstyle} />
+            <TextInput placeholder = {props.plcholder} style={styles.inputstyle} />
         </View>
     )
 }
@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         borderRadius: h('1%'),
         alignSelf: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginTop:h('2%')
     },
     inputstyle:{
         // backgroundColor:'blue',

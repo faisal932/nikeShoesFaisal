@@ -21,17 +21,21 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderRadius: h('1%'),
         backgroundColor:'#FFFFFF',
-        margin:h('6%')
+        margin:h('6%'),
+        alignItems: 'center',
+        justifyContent: 'space-evenly'
     },
     imgstyle:{
         resizeMode: 'contain',
         height:h('6.5%'),
-        width:'40%',
+        width:'20%',
         // backgroundColor:'blue'
     },
     txtstyle:{
-        paddingLeft:h('1%'),
-        fontSize: h('3%')
+        // paddingLeft:h('1%'),
+        fontSize: h('3%'),
+        color: '#696C79',
+        fontSize: h('2%')
     },
     imgcontainerstyle:{
         alignItems:'center',
