@@ -1,20 +1,25 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import {w,h} from 'react-native-responsiveness';
 import { WelcomeButton } from './WelcomeButton';
 import { WelcomeIconTxtButton } from './WelcomeIconTxtButton';
 import { WelcomeTextinput } from './WelcomeTextinput';
+
 export const WelcomeSecondhalf = () => {
     return (
         <View>
             <View style={styles.txtcontainer} >
+                <TouchableOpacity>
                 <Text style={styles.firstcontaier} >Sign Up</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
                 <Text style={styles.secondcontaier} >Login</Text>
+                </TouchableOpacity>
             </View>
             <View style={styles.container} >
-                <WelcomeTextinput plcholder = "User name" src = {require("../assets/usericon.png")} />
+            <WelcomeTextinput plcholder = "User name" src = {require("../assets/usericon.png")}  />
                 <WelcomeTextinput plcholder = "Email Address" src = {require("../assets/email.png")} />
-                <WelcomeTextinput plcholder = "Password" src = {require("../assets/passwordicon.png")} />
+                <WelcomeTextinput plcholder = "Password" src = {require("../assets/passwordicon.png")} passwordtype = {true} />
                 <WelcomeButton txt="SIGN UP" />
                 <View style={styles.icontxtbtncontainer} >
                     <WelcomeIconTxtButton src={require('../assets/google-symbol.png')} text="Google" />

@@ -2,13 +2,13 @@ import React from 'react'
 import { StyleSheet, Text, View, TextInput, Image } from 'react-native'
 import { w, h } from "react-native-responsiveness";
 
-export const WelcomeTextinput = (props) => {
+export const WelcomeTextinput = ({plcholder, src, passwordtype = false}) => {
     return (
         <View style={styles.container} >
             <View style={styles.iconcontainer} >
-                <Image source = {props.src} style={styles.imgstyle} />
+                <Image source = {src} style={styles.imgstyle} />
             </View>
-            <TextInput placeholder = {props.plcholder} style={styles.inputstyle} />
+            <TextInput placeholder = {plcholder} style={styles.inputstyle} secureTextEntry  = {passwordtype}/>
         </View>
     )
 }
